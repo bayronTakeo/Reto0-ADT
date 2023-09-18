@@ -68,7 +68,7 @@ public class Reto0ADT {
                    break;
             }
            
-            } while ( opcion != -1);
+            } while ( opcion == -1);
 
         // Cierra el Scanner
         scanner.close();
