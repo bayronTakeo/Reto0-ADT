@@ -5,6 +5,7 @@
  */
 package main;
 
+import controlador.Controlador;
 import java.util.Scanner;
 import modelo.DAO;
 import modelo.Factoria;
@@ -36,15 +37,14 @@ public class Reto0ADT {
             System.out.println("4. Consultar enunciado");
             System.out.println("5. Consultar convocatoria");
 
-           
+           Controlador control = new Controlador();
 
             // Leer la respuesta del usuario
             opcion = scanner.nextInt();
 
             switch (opcion) {
                case 1:
-                   System.out.println("Ha seleccionado la Opción 1. Crear unidad didactica");
-
+                   control.crearUnidadDidactica();
                    break;
                case 2:
                    System.out.println("Ha seleccionado la Opción 2. Crear convocatoria");

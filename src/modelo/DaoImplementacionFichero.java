@@ -5,10 +5,17 @@
  */
 package modelo;
 
+import clases.UnidadDidactica;
+
 /**
  *
  * @author 2dam
  */
 public class DaoImplementacionFichero implements DAO {
+
+    @Override
+    public void crearUnidadDidactica(UnidadDidactica uni) {
+       
+    }
     
 }

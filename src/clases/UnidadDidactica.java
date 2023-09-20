@@ -5,6 +5,8 @@
  */
 package clases;
 
+import utilidades.Utilidades;
+
 /**
  *
  * @author 2dam
@@ -17,13 +19,7 @@ public class UnidadDidactica {
     private String descripcion;
 
     // Constructor
-    public UnidadDidactica(Integer id, String acronimo, String titulo, String evaluacion, String descripcion) {
-        this.id = id;
-        this.acronimo = acronimo;
-        this.titulo = titulo;
-        this.evaluacion = evaluacion;
-        this.descripcion = descripcion;
-    }
+  
 
     // Métodos getter y setter para cada atributo
     public Integer getId() {
@@ -64,5 +60,13 @@ public class UnidadDidactica {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+    //Metodos
+    
+    public void setDatos() { 
+        acronimo = Utilidades.introducirCadena("Introduce el acronimo de la unidad didactica");
+        titulo = Utilidades.introducirCadena("Introduce el titulo de la unidad didactica");
+        evaluacion = Utilidades.introducirCadena("Introduce a que evaluacion pertenece la unidad didactica");
+        descripcion = Utilidades.introducirCadena("Introduce la descripcion de la unidad didactica");
     }
 }
