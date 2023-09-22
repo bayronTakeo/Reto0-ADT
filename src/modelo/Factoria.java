@@ -6,6 +6,8 @@
 package modelo;
 
 import clases.UnidadDidactica;
+import controlador.Controlador;
+import interfazUsuario.Menu;
 
 /**
  *
@@ -19,4 +21,11 @@ public class Factoria {
         return new UnidadDidactica();
     }
     
+    public static Menu getMenu() {
+        return new Menu();
+    } 
+    
+    public static Controlador getControlador() {
+        return new Controlador();
+    }
 }

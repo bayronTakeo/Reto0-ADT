@@ -73,7 +73,7 @@ public class DAOImplementacionBda implements DAO {
         boolean introducido = false ;
         try {
             stmt = con.prepareStatement(crear_unidad);
-            stmt.setInt(1, 2);
+            stmt.setInt(1, 5);
             stmt.setString(2, uni.getAcronimo());
             stmt.setString(3, uni.getTitulo());
             stmt.setString(4, uni.getEvaluacion());
