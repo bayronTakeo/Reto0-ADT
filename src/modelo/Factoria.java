@@ -5,6 +5,8 @@
  */
 package modelo;
 
+import clases.UnidadDidactica;
+
 /**
  *
  * @author 2dam
@@ -12,6 +14,9 @@ package modelo;
 public class Factoria {
     public static DAO getDaoBDA(){
         return new DAOImplementacionBda();
+    }
+    public static UnidadDidactica getUnidadDidactica() {
+        return new UnidadDidactica();
     }
     
 }
