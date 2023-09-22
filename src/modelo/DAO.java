@@ -5,10 +5,13 @@
  */
 package modelo;
 
+import clases.UnidadDidactica;
+
 /**
  *
  * @author 2dam
  */
 public interface DAO {
     
+    public void crearUnidadDidactica(UnidadDidactica uni);
 }
