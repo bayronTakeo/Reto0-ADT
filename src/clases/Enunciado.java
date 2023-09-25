@@ -6,6 +6,7 @@
 package clases;
 
 import java.util.Enumeration;
+import utilidades.Utilidades;
 
 /**
  *
@@ -67,4 +68,5 @@ public class Enunciado {
     public void setRuta(String ruta) {
         this.ruta = ruta;
     }
+
 }

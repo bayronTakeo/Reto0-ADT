@@ -43,7 +43,7 @@ public class Menu {
                    control.crearUnidadDidactica();
                    break;
                case 2:
-                   System.out.println("Ha seleccionado la Opción 2. Crear convocatoria");
+                   control.crearConvocatoria();
                    // Coloca aquí el código correspondiente a la Opción 2
                    break;
                case 3:

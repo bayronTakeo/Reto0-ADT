@@ -5,7 +5,9 @@
  */
 package modelo;
 
+import clases.Convocatoria;
 import clases.UnidadDidactica;
+import java.io.File;
 
 /**
  *
@@ -14,4 +16,6 @@ import clases.UnidadDidactica;
 public interface DAO {
     
     public void crearUnidadDidactica(UnidadDidactica uni);
+    
+    public void crearConvocatoria(Convocatoria convo, File convocatoria);
 }

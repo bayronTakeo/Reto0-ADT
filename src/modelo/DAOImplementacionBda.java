@@ -5,7 +5,9 @@
  */
 package modelo;
 
+import clases.Convocatoria;
 import clases.UnidadDidactica;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -24,10 +26,10 @@ import java.util.logging.Logger;
  */
 public class DAOImplementacionBda implements DAO {
 
-    private Connection con = null;
-    private PreparedStatement stmt;
+        private Connection con = null;
+        private PreparedStatement stmt;
     
-    final private String crear_unidad = "INSERT INTO unidad VALUES (?, ?, ?, ?, ?)";
+        final private String crear_unidad = "INSERT INTO unidad VALUES (?, ?, ?, ?, ?)";
        public void abrirConexion()  {
            
         try {
@@ -91,6 +93,11 @@ public class DAOImplementacionBda implements DAO {
         }
         this.cerrarConexion();
 
+    }
+
+    @Override
+    public void crearConvocatoria(Convocatoria convo, File convocatoria) {
+       
     }
 
     

@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import clases.Convocatoria;
 import clases.UnidadDidactica;
 import controlador.Controlador;
 import interfazUsuario.Menu;
@@ -27,5 +28,9 @@ public class Factoria {
     
     public static Controlador getControlador() {
         return new Controlador();
+    }
+    
+    public static Convocatoria getConvocatoria() {
+        return new Convocatoria();
     }
 }
