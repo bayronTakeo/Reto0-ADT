@@ -6,6 +6,7 @@
 package modelo;
 
 import clases.Convocatoria;
+import clases.Enunciado;
 import clases.UnidadDidactica;
 import controlador.Controlador;
 import interfazUsuario.Menu;
@@ -32,5 +33,9 @@ public class Factoria {
     
     public static Convocatoria getConvocatoria() {
         return new Convocatoria();
+    }
+    
+    public static Enunciado getEnunciado() {
+        return new Enunciado();
     }
 }

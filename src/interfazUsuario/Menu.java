@@ -47,7 +47,7 @@ public class Menu {
                    // Coloca aquí el código correspondiente a la Opción 2
                    break;
                case 3:
-                   System.out.println("Ha seleccionado la Opción 3. Crear enunciado");
+                   control.crearEnunciado();
                    // Coloca aquí el código correspondiente a la Opción 3
                    break;
                 case 4:

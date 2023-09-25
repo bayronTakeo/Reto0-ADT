@@ -6,6 +6,7 @@
 package modelo;
 
 import clases.Convocatoria;
+import clases.Enunciado;
 import clases.UnidadDidactica;
 import controlador.Controlador;
 import java.io.File;
@@ -50,6 +51,11 @@ public class DaoImplementacionFichero implements DAO {
                 Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+    }
+
+    @Override
+    public void crearEnunciado(Enunciado enun) {
+        
     }
     
 }

@@ -6,6 +6,7 @@
 package controlador;
 
 import clases.Convocatoria;
+import clases.Enunciado;
 import clases.UnidadDidactica;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -26,6 +27,7 @@ public class Controlador {
     UnidadDidactica unidad = Factoria.getUnidadDidactica();
     Convocatoria convo = Factoria.getConvocatoria();
     File convocatoria = new File("convocatoria.obj");
+    Enunciado enun = Factoria.getEnunciado();
     
     public void crearUnidadDidactica() {
         unidad.setDatos();
@@ -36,6 +38,12 @@ public class Controlador {
     public void crearConvocatoria() {
         dao.crearConvocatoria(convo, convocatoria);
         
+    }
+    
+    public void crearEnunciado() {
+        enun.setDatos();
+        
+        dao.crearEnunciado(enun);
     }
         
     

@@ -15,17 +15,13 @@ import utilidades.Utilidades;
 public class Enunciado {
     private Integer id;
     private String descripcion;
-    private Enumeration nivel;
+    private int nivel;
     private boolean disponible;
     private String ruta;
 
     // Constructor
-    public Enunciado(Integer id, String descripcion, Enumeration nivel, boolean disponible, String ruta) {
-        this.id = id;
-        this.descripcion = descripcion;
-        this.nivel = nivel;
-        this.disponible = disponible;
-        this.ruta = ruta;
+    public Enunciado() {
+
     }
 
     // Métodos getter y setter para cada atributo
@@ -45,11 +41,11 @@ public class Enunciado {
         this.descripcion = descripcion;
     }
 
-    public Enumeration getNivel() {
+    public int getNivel() {
         return nivel;
     }
 
-    public void setNivel(Enumeration nivel) {
+    public void setNivel(int nivel) {
         this.nivel = nivel;
     }
 
@@ -68,5 +64,12 @@ public class Enunciado {
     public void setRuta(String ruta) {
         this.ruta = ruta;
     }
-
+    
+    //Metodos
+    public void setDatos(){
+        descripcion = Utilidades.introducirCadena("Introduce la Descripcion:");
+        nivel = Utilidades.leerInt("Introudce el Nivel");
+        disponible = Utilidades.esBoolean("Esta disponible");
+        ruta = Utilidades.introducirCadena("Introoduce la ruta");
+    }
 }

@@ -6,6 +6,7 @@
 package modelo;
 
 import clases.Convocatoria;
+import clases.Enunciado;
 import clases.UnidadDidactica;
 import java.io.File;
 
@@ -18,4 +19,6 @@ public interface DAO {
     public void crearUnidadDidactica(UnidadDidactica uni);
     
     public void crearConvocatoria(Convocatoria convo, File convocatoria);
+    
+    public void crearEnunciado(Enunciado enun);
 }

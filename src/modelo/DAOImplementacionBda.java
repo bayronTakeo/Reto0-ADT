@@ -6,6 +6,7 @@
 package modelo;
 
 import clases.Convocatoria;
+import clases.Enunciado;
 import clases.UnidadDidactica;
 import java.io.File;
 import java.io.FileInputStream;
@@ -30,6 +31,7 @@ public class DAOImplementacionBda implements DAO {
         private PreparedStatement stmt;
     
         final private String crear_unidad = "INSERT INTO unidad VALUES (?, ?, ?, ?, ?)";
+        final private String crear_enunciado = "INSERT INTO enunciado VALUES (?, ?, ?, ?, ?)";
        public void abrirConexion()  {
            
         try {
@@ -100,6 +102,33 @@ public class DAOImplementacionBda implements DAO {
        
     }
 
+    public void crearEnunciado(Enunciado enun) {
+
+        // TODO Auto-generated method stub
+        this.abrirConexion();
+        ResultSet rs;
+        boolean introducido = false ;
+        try {
+            stmt = con.prepareStatement(crear_enunciado);
+            stmt.setInt(1, 3);
+            stmt.setString(2, enun.getDescripcion());
+            stmt.setInt(3, enun.getNivel());
+            stmt.setBoolean(4, enun.isDisponible());
+            stmt.setString(5, enun.getRuta());
+
+            if (stmt.executeUpdate() == 1) {
+                introducido = true;
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(DAOImplementacionBda.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if(introducido) { 
+            System.out.println("prueba");
+        }
+        this.cerrarConexion();
+
+    }
     
     
 }
