@@ -16,13 +16,12 @@ import utilidades.Utilidades;
  * @author 2dam
  */
 public class Menu {
-    
+
     public void menu(Controlador cont) {
-        
+
         int opcion;
-                 
-        
-        do{
+
+        do {
             //Menu
             System.out.println("Bienvenido a la aplicacion" + "\n");
 
@@ -33,38 +32,37 @@ public class Menu {
             System.out.println("4. Consultar enunciado");
             System.out.println("5. Consultar convocatoria");
 
-           Controlador control = new Controlador();
+            Controlador control = new Controlador();
 
             // Leer la respuesta del usuario
             opcion = Utilidades.leerInt("Elije una opción:");
 
             switch (opcion) {
-               case 1:
-                   control.crearUnidadDidactica();
-                   break;
-               case 2:
-                   control.crearConvocatoria();
-                   // Coloca aquí el código correspondiente a la Opción 2
-                   break;
-               case 3:
-                   control.crearEnunciado();
-                   // Coloca aquí el código correspondiente a la Opción 3
-                   break;
+                case 1:
+                    control.crearUnidadDidactica();
+                    break;
+                case 2:
+                    control.crearConvocatoria();
+                    // Coloca aquí el código correspondiente a la Opción 2
+                    break;
+                case 3:
+                    control.crearEnunciado();
+                    // Coloca aquí el código correspondiente a la Opción 3
+                    break;
                 case 4:
-                   System.out.println("Ha seleccionado la Opción 4. Consultar enunciado");
+                    control.consultarEnunciado();
 
-                   break;
-                   case 5:
-                   System.out.println("Ha seleccionado la Opción 5. Consultar convocatoria");
-                   // Coloca aquí el código correspondiente a la Opción 3
-                   break;
-               default:
-                   System.out.println("Opción no válida.");
-                   opcion = -1;
-                   break;
+                    break;
+                case 5:
+                    control.consultarConvocatoria();
+                    break;
+                default:
+                    System.out.println("Opción no válida.");
+                    opcion = -1;
+                    break;
             }
-           
-            } while ( opcion == -1);
+
+        } while (opcion == -1);
 
     }
 

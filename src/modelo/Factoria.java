@@ -19,6 +19,9 @@ public class Factoria {
     public static DAO getDaoBDA(){
         return new DAOImplementacionBda();
     }
+    public static DAO getDaoFile() { 
+         return new DaoImplementacionFichero();
+    }
     public static UnidadDidactica getUnidadDidactica() {
         return new UnidadDidactica();
     }

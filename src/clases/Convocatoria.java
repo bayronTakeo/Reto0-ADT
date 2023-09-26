@@ -13,11 +13,13 @@ import utilidades.Utilidades;
  *
  * @author 2dam
  */
-public class Convocatoria implements Serializable{
+public class Convocatoria implements Serializable {
+
     private String convocatoria;
     private String descripcion;
     private LocalDate fecha;
     private String curso;
+    private int idEnunciado;
 
     // Constructor
     public Convocatoria() {
@@ -55,9 +57,17 @@ public class Convocatoria implements Serializable{
     public void setCurso(String curso) {
         this.curso = curso;
     }
-    
+
+    public int getIdEnunciado() {
+        return idEnunciado;
+    }
+
+    public void setIdEnunciado(int idEnunciado) {
+        this.idEnunciado = idEnunciado;
+    }
+
     //Metodos
-    public void setDatos(){
+    public void setDatos() {
         convocatoria = Utilidades.introducirCadena("Introduce la Convocatoria:");
         descripcion = Utilidades.introducirCadena("Introduce la Descripcion:");
         fecha = Utilidades.introducirFecha("Introduce la fecha:");
